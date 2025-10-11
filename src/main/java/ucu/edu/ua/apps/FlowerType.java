@@ -1,5 +1,11 @@
 package ucu.edu.ua.apps;
 
+/** Represents the type of a flower. */
 public enum FlowerType {
-    ROSE, TULIP, CHAMOMILE
+  /** Rose flower type. */
+  ROSE,
+  /** Tulip flower type. */
+  TULIP,
+  /** Chamomile flower type. */
+  CHAMOMILE
 }

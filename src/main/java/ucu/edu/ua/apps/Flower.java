@@ -5,10 +5,24 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+/**
+ * Represents a flower in the flower store.
+ * Contains basic attributes like sepal length, color, price, and type.
+ */
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Flower {
-    private double sepalLength;
-    private FlowerColor color;
-    private double price;
-    private FlowerType flowerType;
+  /** The length of the flower's sepal in centimeters. */
+  private double sepalLength;
+
+  /** The color of the flower. */
+  private FlowerColor color;
+
+  /** The price of the flower. */
+  private double price;
+
+  /** The type of the flower (Rose, Tulip, Chamomile). */
+  private FlowerType flowerType;
 }

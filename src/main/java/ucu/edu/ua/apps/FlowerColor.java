@@ -1,16 +1,28 @@
 package ucu.edu.ua.apps;
 
+/** Represents the color of a flower. Each color
+ * has a hexadecimal representation. */
 public enum FlowerColor {
-    RED("#FF0000"), GREEN("#008000"), BLUE("#0000FF");
+  /** Red color. */
+  RED("#FF0000"),
+  /** Green color. */
+  GREEN("#008000"),
+  /** Blue color. */
+  BLUE("#0000FF"),
+  /** White color. */
+  WHITE("#FFFFFF"),
+  /** Yellow color. */
+  YELLOW("#FFFF00");
 
-    private String hexColor;
+  /** The hexadecimal representation of the color. */
+  private final String hexColor;
 
-    FlowerColor(String hexColor) {
-        this.hexColor = hexColor;
-    }
+  FlowerColor(final String newHexColor) {
+    this.hexColor = newHexColor;
+  }
 
-    @Override
-    public String toString() {
-        return hexColor;
-    }
+  @Override
+  public String toString() {
+    return hexColor;
+  }
 }

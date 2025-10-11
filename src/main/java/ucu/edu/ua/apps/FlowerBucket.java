@@ -2,22 +2,38 @@ package ucu.edu.ua.apps;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
 
-public class FlowerBucket {
-    private List<FlowerPack> flowerPacks;
+/**
+ * Represents a bucket that contains multiple flower packs.
+ * A bucket can hold various types and quantities of flowers.
+ */
+public final class FlowerBucket {
+  /** The list of flower packs in this bucket. */
+  @Getter private List<FlowerPack> flowerPacks;
 
-    public void addFlowerPack(FlowerPack flowerPack) {
-        if (flowerPacks == null) {
-            flowerPacks = new ArrayList<>();
-        }
-        flowerPacks.add(flowerPack);
+  /**
+   * Adds a flower pack to this bucket.
+   *
+   * @param flowerPack the flower pack to add
+   */
+  public void addFlowerPack(final FlowerPack flowerPack) {
+    if (flowerPacks == null) {
+      flowerPacks = new ArrayList<>();
     }
+    flowerPacks.add(flowerPack);
+  }
 
-    public double getPrice() {
-        double price = 0;
-        for (FlowerPack flowerPack: flowerPacks) {
-            price += flowerPack.getPrice();
-        }
-        return price;
+  /**
+   * Calculates the total price of all flower packs in this bucket.
+   *
+   * @return the total price
+   */
+  public double getPrice() {
+    double price = 0;
+    for (FlowerPack flowerPack : flowerPacks) {
+      price += flowerPack.getPrice();
     }
+    return price;
+  }
 }

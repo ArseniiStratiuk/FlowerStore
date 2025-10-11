@@ -1,18 +1,29 @@
 package ucu.edu.ua.apps;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+/** Represents a pack of identical flowers. Contains a flower
+ * and the quantity in the pack. */
 @Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class FlowerPack {
-    private Flower flower;
-    private int count;
+  /** The flower in this pack. */
+  private Flower flower;
 
-    public FlowerPack(Flower flower, int count) {
-        this.flower = new Flower(flower);
-        this.count = count;
-    }
+  /** The number of flowers in this pack. */
+  private int amount;
 
-    public double getPrice() {
-        return flower.getPrice() * count;
-    }
+  /**
+   * Calculates the total price for this pack.
+   *
+   * @return the total price (flower price * amount)
+   */
+  public double getPrice() {
+    return flower.getPrice() * amount;
+  }
 }
